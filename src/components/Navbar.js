@@ -48,7 +48,7 @@ const Navbar = () => {
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/ContactMe" title="Contact Me" className="ml-4" />
+        <CustomLink href="/contactMe" title="Contact Me" className="ml-4" />
       </nav>
 
       {/* circle logo */}
