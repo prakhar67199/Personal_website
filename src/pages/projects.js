@@ -60,7 +60,7 @@ const ProjectsData = ({type, title, summary, img, link, github}) => {
     )
 }
 
-const projects = () => {
+const Projects = () => {
 
     const [toggle, setToggle] = useState(1);
 
@@ -253,4 +253,4 @@ const projects = () => {
   )
 }
 
-export default projects;
+export default Projects;

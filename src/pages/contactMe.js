@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import TransitionEffect from "@/components/TransitionEffect";
 
 const ContactMe = () => {
-  const formData = useRef();
+  const formData = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
