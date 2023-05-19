@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TransitionEffect from "@/components/TransitionEffect";
 
-const contactMe = () => {
+const ContactMe = () => {
   const formData = useRef();
 
   const handleSubmit = (e) => {
@@ -167,4 +167,4 @@ const contactMe = () => {
   );
 };
 
-export default contactMe;
+export default ContactMe;
