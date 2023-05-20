@@ -9,7 +9,11 @@ const Skill = ({ name, posx, posy }) => {
       whileInView={{ x: posx, y: posy, transition:{duration:1.5}}}
       viewport={{ once: true }}
       className="flex items-center justify-center rounded-full font-semibold
-      bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-light py-3 px-6 shadow-dark curser-pointer absolute "
+      bg-dark text-light py-3 px-6 shadow-dark curser-pointer
+      absolute dark:text-dark dark:bg-light
+      lg:!py-2 lg:!px-4 md:!text-sm md:!py-1.5 md:!px-3
+      xs:!bg-transparent xs:text-dark xs:dark:text-light 
+      xs:dark:!bg-transparent xs:!font-bold"
     >
       {name}
     </motion.div>
@@ -19,16 +23,23 @@ const Skill = ({ name, posx, posy }) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center">Skills</h2>
+      <h2 className="font-bold text-8xl mt-64 w-full text-center
+      md:!text-6xl md:!mt-32 ">Skills</h2>
 
       <div
         className="w-full relative flex items-center justify-center h-screen 
-        rounded-full bg-circularLight cursor-pointer dark:bg-circularDark"
+        rounded-full bg-circularLight cursor-pointer dark:bg-circularDark
+        lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
+        lg:!bg-circularLightLg lg:dark:!bg-circularDarkLg 
+        md:!bg-circularLightMd md:dark:!bg-circularDarkMd
+        sm:!bg-circularLightSm sm:dark:!bg-circularDarkSm" 
       >
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="flex items-center justify-center rounded-full font-semibold
-          bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500  text-light p-8 shadow-dark"
+          bg-dark text-light p-8 dark:text-dark dark:bg-light
+          lg:!p-6 md:!p-4 xs:!text-xs xs:!p-2
+        shadow-dark "
         >
         Web
         </motion.div>
