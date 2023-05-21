@@ -30,15 +30,16 @@ const Skills = () => {
         className="w-full relative flex items-center justify-center h-screen 
         rounded-full bg-circularLight cursor-pointer dark:bg-circularDark
         lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
-        lg:!bg-circularLightLg lg:dark:!bg-circularDarkLg 
-        md:!bg-circularLightMd md:dark:!bg-circularDarkMd
-        sm:!bg-circularLightSm sm:dark:!bg-circularDarkSm" 
+        lg:bg-circularLightLg lg:dark:bg-circularDarkLg 
+        md:bg-circularLightMd md:dark:bg-circularDarkMd
+        sm:!bg-circularLightSm sm:dark:!bg-circularDarkSm
+        xs:!bg-circularLightSm xs:dark:!bg-circularDarkSm"
       >
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="flex items-center justify-center rounded-full font-semibold
           bg-dark text-light p-8 dark:text-dark dark:bg-light
-          lg:!p-6 md:!p-4 xs:!text-xs xs:!p-2
+          lg:p-6 md:p-4 xs:!text-xs xs:!p-2 sm:!p-3
         shadow-dark "
         >
         Web

@@ -7,7 +7,9 @@ const Details = ({ mainHeading, line1, line2, line3, line4 }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between "
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start 
+      justify-between
+      md:w-[80%]"
     >
       <LiIcons reference={ref} />
       <motion.div
@@ -15,19 +17,25 @@ const Details = ({ mainHeading, line1, line2, line3, line4 }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl mb-2 text-primary dark:text-primaryDark">
+        <h3 className="capitalize font-bold text-2xl mb-2 text-primary 
+        dark:text-primaryDark 
+        sm:text-xl xs:text-lg">
           {mainHeading}
         </h3>
-        <p className="capitalize text-sm my-1 font-semibold text-dark/75 dark:text-light/75 ">
+        <p className="capitalize text-sm my-1 font-semibold text-dark/75
+         dark:text-light/75">
           {line1}
         </p>
-        <p className="capitalize text-sm my-1 font-semibold text-dark/75 dark:text-light/75">
+        <p className="capitalize text-sm my-1 font-semibold text-dark/75
+         dark:text-light/75">
           {line2}
         </p>
-        <p className="capitalize text-sm my-1 font-semibold text-dark/75 dark:text-light/75">
+        <p className="capitalize text-sm my-1 font-semibold text-dark/75
+         dark:text-light/75">
           {line3}
         </p>
-        <p className="capitalize text-sm my-1 font-semibold text-dark/75 dark:text-light/75">
+        <p className="capitalize text-sm my-1 font-semibold text-dark/75
+         dark:text-light/75">
           {line4}
         </p>
       </motion.div>
@@ -43,14 +51,19 @@ const Services = () => {
 
   return (
     <div className="my-64 ">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center">Services</h2>
+      <h2 className="font-bold text-8xl mb-32 w-full text-center
+      md:text-6xl xs:text-4xl md:mb-16">Services</h2>
 
-      <div ref={ref} className="w-[75%] mx-auto relative">
+      <div ref={ref} className="w-[75%] lg:w-[90%] md:w-full mx-auto relative">
+
+      {/* straight line */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark dark:bg-light origin-top"
+          className="absolute left-9 top-0   w-[4px] h-full bg-dark
+           dark:bg-light origin-top md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
-        <ul>
+        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-7 sm:ml-10 
+        md:ml-10">
           <Details
             mainHeading="Ui/Ux Designer"
             line1="Designs user interfaces and experiences for websites, apps, and other digital products."

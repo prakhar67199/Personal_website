@@ -24,34 +24,43 @@ import TransitionEffect from '@/components/TransitionEffect';
 
 
 
-const ProjectsData = ({type, title, summary, img, link, github}) => {
+const ProjectsData = ({type, title, img, link, github}) => {
     
     return(
-        <div className=' mt-10'>
-            <article className='flex flex-col items-start justify-center
-            rounded-3xl border border-solid border-black dark:border-light bg-transparent shadow-2xl dark:shadow-slate-500'>
+        <div className='mt-10'>
+            <article className='flex flex-col items-start justify-center relative
+            rounded-3xl border border-solid border-black dark:border-light 
+            bg-transparent shadow-2xl dark:shadow-slate-500'>
 
                 <span className='w-full' target="_blank" >
                     <Image src={img} alt={title} className=' h-[250px] w-full px-4 py-3 rounded-3xl object-cover
-                     hover:scale-105  hover:transition-all hover:duration-300 hover:ease-out '/>
+                     hover:scale-105  hover:transition-all hover:duration-300 hover:ease-out 
+                     lg:h-[200px]  '/>
                 </span>
 
-                <div className='px-4 py-2'>
-                    <span className='text-white bg-primary/75 dark:bg-primaryDark/75 p-1 rounded-md  font-semibold'>{type}</span>
-                    <span className='mb-2 font-bold text-3xl font- text-black dark:text-light '>
-                        <h2 className='mb-3 mt-3' >{title}</h2>
+        
+
+                <div className="ml-6 mb-5"> 
+
+                    <span className='text-white bg-primary/75 dark:bg-primaryDark/75 
+                    p-1 rounded-md font-semibold lg:font-medium '>{type}
                     </span>
 
-                    <p>{summary}</p>
+                    <span className='mb-2 font-bold text-3xl font- text-black dark:text-light
+                    lg:text-2xl lg:font-semibold '>
+                        <h2 className='my-3' >{title}</h2>
+                    </span>
 
-                    <div className='flex flex-row justify-around gap-5 items-center'>
-                        <Link href={github} className='text-4xl ' target="_blank" > <GithubIcon/> </Link>
-                        <Link href={link} target="_blank" className='bg-dark  text-white  p-3 
-                        rounded-lg hover:bg-white hover:text-black
-                        border-2 border-solid border-transparent hover:border-dark
+                    <div className='flex flex-row flex-wrap justify-between items-center'>
+                        <Link href={github} className='text-4xl lg:text-3xl mr-[120px] lg:mr-[50px]' target="_blank" > <GithubIcon/> </Link>
+                        <Link href={link} target="_blank" className='bg-dark text-white
+                      hover:bg-white hover:text-black
+                        p-3 rounded-lg  border border-solid border-transparent
+                      hover:border-dark
                         dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
                         hover:dark:border-light
-                        font-bold letter tracking-wider'>Visit Project</Link>
+                        font-bold  letter tracking-wider
+                        lg:font-semibold lg:p-2'>Visit Project</Link>
                     </div>
                 </div>
 
@@ -81,20 +90,43 @@ const Projects = () => {
         <TransitionEffect/>
         <main className='w-full mb-16 flex flex-col items-center justify-center'>
             <Layout className='pt-16'>
-                <AnimatedText text= "Imagination Trumps Knowledge! "/>
+                <AnimatedText 
+                text= "Imagination Trumps Knowledge! "
+                className="mb-16 lg:text-7xl sm:!text-4xl
+                xs:!text-4xl sm:!mb-8 md:mb-5 "            
+                />
 
 
-                <ul className='mt-6 flex flex-row items-center  justify-evenly curser-pointer border border-gray-500  rounded-full list-none'>
-                    <li className='inline-block w-1/4 h-full p-2 text-center hover:bg-gray-700/75 text-dark dark:text-light hover:text-white font-semibold tracking-wider hover:cursor-pointer border-r-2 border-r-gray-500/75 rounded-s-full' onClick={() => updateToggle(1)} >HTML + CSS</li>
-                    <li className='inline-block w-1/4 h-full p-2 text-center hover:bg-gray-700/75 text-dark dark:text-light hover:text-white font-semibold tracking-wider hover:cursor-pointer border-r-2 border-r-gray-500/75 ' onClick={() => updateToggle(2)} >JavaScript</li>
-                    <li className='inline-block w-1/4 h-full p-2 text-center hover:bg-gray-700/75 text-dark dark:text-light hover:text-white font-semibold tracking-wider hover:cursor-pointer border-r-2 border-r-gray-500/75' onClick={() => updateToggle(3)} >ReactJs</li>
-                    <li className='inline-block w-1/4 h-full p-2 text-center hover:bg-gray-700/75 text-dark dark:text-light hover:text-white font-semibold tracking-wider hover:cursor-pointer rounded-e-full' onClick={() => updateToggle(4)} >Full stack</li>
+                <ul 
+                className=' flex flex-row items-center justify-evenly 
+                curser-pointer border border-gray-500  rounded-full list-none'>
+                    <li 
+                    className='inline-block w-1/4 h-full p-2 text-center
+                  hover:bg-gray-700/75 text-dark dark:text-light 
+                  hover:text-white font-semibold tracking-wider hover:cursor-pointer 
+                  border-r-2 border-r-gray-500/75 rounded-s-full text-xl md:text-base
+                  sm:!text-sm xs:!text-[10px] lg:text-base' 
+                  onClick={() => updateToggle(1)} 
+                  >HTML + CSS</li>
+                    <li className='inline-block w-1/4 h-full p-2 text-center hover:bg-gray-700/75
+                     text-dark dark:text-light hover:text-white font-semibold tracking-wider 
+                     hover:cursor-pointer border-r-2 border-r-gray-500/75 
+                     text-xl md:text-base sm:!text-sm xs:!text-[10px] ' onClick={() => updateToggle(2)} >JavaScript</li>
+                    <li className='inline-block w-1/4 h-full p-2 text-center hover:bg-gray-700/75
+                     text-dark dark:text-light hover:text-white font-semibold tracking-wider 
+                     hover:cursor-pointer border-r-2
+                   border-r-gray-500/75 text-xl md:text-base sm:!text-sm xs:!text-[10px]'
+                    onClick={() => updateToggle(3)} >ReactJs</li>
+                    <li className='inline-block w-1/4 h-full p-2 text-center hover:bg-gray-700/75
+                     text-dark dark:text-light hover:text-white font-semibold tracking-wider 
+                     hover:cursor-pointer rounded-e-full text-xl md:text-base sm:!text-sm xs:!text-[10px]' onClick={() => updateToggle(4)} >Full stack</li>
                 </ul>
 
 
-                <div className='grid grid-cols-3 gap-5'>
+                <div className='grid grid-cols-3 gap-5
+                md:grid md:grid-cols-1 '>
 
-                    <div className={toggle === 1 ?'block':'hidden'}>
+                    <div className={toggle === 1 ?'block ':'hidden' }>
                         <ProjectsData
                             title="Parllel-X Website"
                             img={project1}
@@ -143,6 +175,7 @@ const Projects = () => {
                             type="HTML + CSS"
                         />
                     </div>
+
                     <div className={toggle === 1 ?'block':'hidden'}>
                         <ProjectsData
                             title="Online Web UI"
@@ -162,6 +195,7 @@ const Projects = () => {
                             type="HTML + CSS + JS"
                         />
                     </div>
+
                     <div className={toggle === 2 ?'block':'hidden'}>
                         <ProjectsData
                             title="Clock"
@@ -171,6 +205,7 @@ const Projects = () => {
                             type="HTML + CSS + JS"
                         />
                     </div>
+
                     <div className={toggle === 2 ?'block':'hidden'}>
                         <ProjectsData
                             title="Calculator"
@@ -180,6 +215,7 @@ const Projects = () => {
                             type="HTML + CSS + JS"
                         />
                     </div>
+
                     <div className={toggle === 2 ?'block':'hidden'}>
                         <ProjectsData
                             title="Portfolio"
@@ -189,6 +225,7 @@ const Projects = () => {
                             type="HTML + CSS + JS"
                         />
                     </div>
+
                     <div className={toggle === 2 ?'block':'hidden'}>
                         <ProjectsData
                             title="Git Repo-Finder"
@@ -198,6 +235,7 @@ const Projects = () => {
                             type="HTML + CSS + JS"
                         />
                     </div>
+
                     <div className={toggle === 2 ?'block':'hidden'}>
                         <ProjectsData
                             title="Weather API"
@@ -207,15 +245,17 @@ const Projects = () => {
                             type="HTML + CSS + JS"
                         />
                     </div>
+
                     <div className={toggle === 2 ?'block':'hidden'}>
                         <ProjectsData
-                            title="Random Password Generator"
+                            title="Password Generator"
                             img={project13}
                             link="https://wondrous-starlight-8f21f3.netlify.app"
                             github="https://github.com/prakhar67199/random_password_generator"
                             type="HTML + CSS + JS"
                         />
                     </div>
+
                     <div className={toggle === 2 ?'block':'hidden'}>
                         <ProjectsData
                             title="Tic-tac-toe"
